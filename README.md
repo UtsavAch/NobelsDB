@@ -1,32 +1,39 @@
-# Reference
+# Nobel Laureates Database Project
 
--sqlite3
--Flask
--Jinja templates
+This project involves the creation and management of a database for Nobel laureates (both individuals and institutions) using SQLite. It includes a detailed ER/UML diagram, database creation, data insertion, and querying using Python, alongside a JavaScript-based interactive visual interface.
+
+## Features
+- **ER/UML Diagram**: Defines the structure and relationships of the Nobel laureates data.
+- **SQLite Database**: Stores comprehensive data about Nobel Prize winners.
+- **Python Scripts**: Handle data queries and various database operations.
+- **JavaScript Interface**: Provides a dynamic and interactive way to visualize and interact with the database.
+
+## Installation and Usage
+1. **Database Setup**: Instructions for setting up and populating the SQLite database.
+2. **Python Scripts**: Scripts to query and manipulate the database.
+3. **JavaScript Frontend**: Interface for visual interaction with the data.
+
+## Technologies Used
+- SQLite3
+- Python
+- Flask
+- Jinja templates
+- JavaScript
 
 # Dependency Installation
-
-Python 3 and pip
+Python3 and pip3
 You should have Python 3 and the package manager pip installed. You can
 install them on Ubuntu, for example, using:
 sudo apt-get install python3 python3-pip
-
 # Python Libraries
-
-css
 pip3 install --user Flask
 
 # Execution
-
 Start the application by running python3 server.py and interact with it
 by opening a browser window at http://localhost:9001/
-
+---------------------
 $ python3 server.py
+---------------------
 
-- Serving Flask app "app" (lazy loading)
-- Environment: production
-  WARNING: This is a development server. Do not use it in a production deployment.
-  Use a production WSGI server instead.
-- Debug mode: off
-  2021-11-27 15:07:33 - INFO - \* Running on http://0.0.0.0:9001/ (Press CTRL+C to quit)
-  ...
+Feel free to explore the repository!
+
