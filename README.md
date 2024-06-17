@@ -6,19 +6,18 @@ This project involves the creation and management of a database for Nobel laurea
 - **ER/UML Diagram**: Defines the structure and relationships of the Nobel laureates data.
 - **SQLite Database**: Stores comprehensive data about Nobel Prize winners.
 - **Python Scripts**: Handle data queries and various database operations.
-- **JavaScript Interface**: Provides a dynamic and interactive way to visualize and interact with the database.
+- **HTML Interface**: Provides a dynamic and interactive way to visualize and interact with the database.
 
 ## Installation and Usage
 1. **Database Setup**: Instructions for setting up and populating the SQLite database.
 2. **Python Scripts**: Scripts to query and manipulate the database.
-3. **JavaScript Frontend**: Interface for visual interaction with the data.
+3. **Frontend**: Interface for visual interaction with the data.
 
 ## Technologies Used
 - SQLite3
 - Python
 - Flask
 - Jinja templates
-- JavaScript
 
 # Dependency Installation
 Python3 and pip3
