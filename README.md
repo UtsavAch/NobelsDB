@@ -30,10 +30,9 @@ pip3 install --user Flask
 
 # Execution
 Start the application by running python3 server.py and interact with it
-by opening a browser window at http://localhost:9001/
----------------------
+by opening a browser window at "http://localhost:9001/"
+
 $ python3 server.py
----------------------
 
 Feel free to explore the repository!
 
