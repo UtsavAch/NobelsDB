@@ -1,6 +1,6 @@
 # Nobel Laureates Database Project
 
-This project involves the creation and management of a database for Nobel laureates (both individuals and institutions) using SQLite. It includes a detailed ER/UML diagram, database creation, data insertion, and querying using Python, alongside a JavaScript-based interactive visual interface.
+This project involves the creation and management of a database for Nobel laureates (both individuals and institutions) using SQLite. It includes a detailed ER/UML diagram, database creation, data insertion, and querying using Python, alongside a interactive visual interface.
 
 ## Features
 - **ER/UML Diagram**: Defines the structure and relationships of the Nobel laureates data.
