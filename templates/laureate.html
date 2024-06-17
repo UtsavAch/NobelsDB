@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Laureate</h1>
+<p><b>LaureateID: </b>{{ laureate.LaureateID }}</p>
+<p><b>Name: </b>{{ laureate.Name }}</p>
+<p>
+  <b>CityID: </b><a href="/cities/{{laureate.CityID}}">{{laureate.CityID}}</a>
+</p>
+<p><a href="/laureatesinfo/{{ laureate.LaureateID }}">More Info</a></p>
+{% endblock %}

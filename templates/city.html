@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h1>City Info</h1>
+<p><b>CityID: </b>{{ city.CityID }}</p>
+<p><b>CityName: </b>{{ city.Name }}</p>
+<p>
+  <b>CountryID: </b
+  ><a href="/countries/{{city.CountryID}}">{{city.CountryID}}</a>
+</p>
+{% endblock %}

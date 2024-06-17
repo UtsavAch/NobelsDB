@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Laureates</h1>
+{% for laureate in laureates %}
+<div>
+  <hr style="border: 0.5px solid black" />
+  <p><b>LaureateID: </b>{{ laureate.LaureateID }}</p>
+  <p><b>Name: </b>{{ laureate.Name }}</p>
+  <p><a href="/laureatesinfo/{{ laureate.LaureateID }}">More Info</a></p>
+</div>
+{% endfor %} {% endblock %}

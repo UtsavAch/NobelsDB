@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Nobel prize</h1>
+<p><b>Category: </b>{{ category.CategoryName }}</p>
+<p><b>PrizeFullName: </b>{{ category.CategoryFullName }}</p>
+<p><b>NobelID: </b>{{ nobel.NobelID }}</p>
+<p>
+  <b>Laureates</b>
+  <br />
+  {% for laureate in laureates %} -{{laureate.Name}} <br />{% endfor %}
+</p>
+<p><b>Year: </b>{{ nobel.Year }}</p>
+<p><b>Motivation: </b>{{ nobel.Motivation}}</p>
+<p><b>PrizeAmount: </b>{{ nobel.PrizeAmount }}</p>
+<p><b>PrizeAmountAdjusted: </b>{{ nobel.PrizeAmountAdjusted }}</p>
+<p><b>PrizeStatus: </b>{{ nobel.PrizeStatus }}</p>
+<p><b>DateAwarded: </b>{{ nobel.DateAwarded }}</p>
+{% endblock %}

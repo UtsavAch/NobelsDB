@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Continent Table</h3>
+<table>
+  <tr>
+    <th>
+      <b>ContinentID</b>
+    </th>
+    <th>
+      <b>ContinentName</b>
+    </th>
+  </tr>
+
+  {% for continent in continents %}
+  <tr>
+    <td>
+      <a href="/continents/{{continent.ContinentID}}"
+        >{{continent.ContinentID}}</a
+      >
+    </td>
+    <td>{{continent.Name }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

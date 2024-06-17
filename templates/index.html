@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Nobels database</h1>
+
+<h2>About</h2>
+<p>This web application illustrates the use of the Nobels
+database. The application is built using 
+<a href="https://docs.python.org/3/library/sqlite3.html">sqlite3</a>,
+<a href="https://flask.palletsprojects.com">Flask</a>, and
+<a href="https://jinja.palletsprojects.com">Jinja</a>.
+</p>
+
+<h2>Some database statistics</h2>
+<table>
+<tr>
+  <th>Items</th>
+  <th>Count</th>
+</tr>
+<tr>
+  <td>Categories</td>
+  <td>{{ stats.n_categories }}</td>
+</tr>
+<tr>
+  <td>Cities</td>
+  <td>{{ stats.n_cities }}</td>
+</tr>
+<tr>
+  <td>Continents</td>
+  <td>{{ stats.n_continents}}</td>
+</tr>
+<tr>
+  <td>Countries</td>
+  <td>{{ stats.n_countries }}</td>
+</tr>
+<tr>
+  <td>Institutions</td>
+  <td>{{ stats.n_institutions }}</td>
+</tr>
+<tr>
+  <td>Laureates</td>
+  <td>{{ stats.n_laureates }}</td>
+</tr>
+<tr>
+  <td>Nobels</td>
+  <td>{{ stats.n_nobels }}</td>
+</tr>
+<tr>
+  <td>Persons</td>
+  <td>{{ stats.n_persons }}</td>
+</tr>
+</table>
+
+
+<h2>Sample functionality</h2>
+
+<!-- ---------- -->
+
+<!-- Prizes -->
+<h3>Prizes</h3>
+<p>This query shows records of Prize table</p>
+<p>
+   <a href="/prizes/">List all</a>
+</p>
+<!-- ---------- -->
+
+<!-- Nobels -->
+<h3>Nobels</h3>
+<p>This query shows records of Nobel table</p>
+<p>
+   <a href="/nobels/">List all</a>
+</p>
+
+<p>Search by NobelId:
+<form name="nobelIdForm" action="javascript:searchNobel('/nobels/'+document.forms['nobelIdForm'].elements['id'].value)">
+   Nobel Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+<!-- ---------- -->
+
+<!-- Categories -->
+<h3>Categories</h3>
+<p>This query shows records of Category table</p>
+<p>
+   <a href="/categories/">List all</a>
+</p>
+<!-- ---------- -->
+
+<!-- Laureates -->
+<h3>Laureates</h3>
+<p>This query shows records of Laureate table</p>
+<p>
+   <a href="/laureates/">List all</a>
+</p>
+<!-- ---------- -->
+
+<!-- Institutions -->
+<h3>Institutions</h3>
+<p>This query shows records of Institution table</p>
+<p>
+   <a href="/institutions/">List all</a>
+</p>
+<!-- ---------- -->
+
+<!-- Persons -->
+<h3>Persons</h3>
+<p>This query shows records of Person table</p>
+<p>
+   <a href="/persons/">List all</a>
+</p>
+<!-- ---------- -->
+<!-- Cities -->
+<h3>Cities</h3>
+<p>This query shows records of City table</p>
+<p>
+   <a href="/cities/">List all</a>
+</p>
+<!-- ---------- -->
+<!-- Countries -->
+<h3>Countries</h3>
+<p>This query shows records of Country table</p>
+<p>
+   <a href="/countries/">List all</a>
+</p>
+<!-- Continents -->
+<h3>Continents</h3>
+<p>This query shows records of Continent table</p>
+<p>
+   <a href="/continents/">List all</a>
+</p>
+<!-- ---------- -->
+<!-- Laureates -->
+<h3>Laureates Info</h3>
+<p>This query extracts information from 6 tables (City, Country, Continent, Laureate, Institution, Person) to obtain
+  LaureateID, Name of the Laureate (Institution as well as Person), City, Country, and Continent of the Laureate.
+</p>
+<p>
+   <a href="/laureatesinfo/">List all</a>
+</p>
+<p>Search by LaureateID:
+<form name="laureateIdForm" action="javascript:searchLaureate('/laureates/'+document.forms['laureateIdForm'].elements['id'].value)">
+   Laureate Id:<input value="1" name="id" type="number" min="1"/><input type="submit" value="get"/>
+</form>
+</p>
+<p>Search by Laureate Name:
+<form name="laureateNameForm" action="javascript:searchLaureate('/laureatesinfo/search/'+document.forms['laureateNameForm'].elements['expr'].value)">
+  <input name="expr" id="expr" value="A. Michael Spence" required/>
+  <input type="submit" value="search"/>
+</form>
+</p>
+
+<!-- Nobel prizes by Country -->
+<h3>Which countries have the highest no. of nobel prizes?</h3>
+<p>Shows the no. of nobel prizes that a country has won, ordered from highest to lowest</p>
+<p>
+   <a href="/by-country/">List all</a>
+</p>
+<!-- ---------- -->
+<!-- Laureates who have won more than one nobel prizes -->
+<h3>Which laureates have won multiple nobel prizes?</h3>
+<p>Shows the laureates with more than one nobel prizes, ordered by name </p>
+<p>
+   <a href="/laureates-many-prizes/">List all</a>
+</p>
+<!-- ---------- -->
+
+<script>
+  function searchLaureate(url) {
+      window.open(url, '_self');
+  }
+
+  function searchNobel(url) {
+      window.open(url, '_self');
+  }
+</script>
+{% endblock %}

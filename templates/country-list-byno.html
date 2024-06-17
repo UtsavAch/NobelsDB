@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Which country has the highest no. of nobel prizes?</h3>
+<table>
+  <tr>
+    <th>
+      <b>Country</b>
+    </th>
+    <th>
+      <b>Count</b>
+    </th>
+  </tr>
+
+  {% for country in countries %}
+  <tr>
+    <td>{{country.Country}}</td>
+    <td>{{country.Count }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

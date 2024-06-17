@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Categories</h1>
+<table>
+  <tr>
+    <th>
+      <b>CategoryID</b>
+    </th>
+    <th>
+      <b>Name</b>
+    </th>
+    <th>
+      <b>FullName</b>
+    </th>
+  </tr>
+
+  {% for category in categories %}
+  <tr>
+    <td>
+      <a href="/categories/{{ category.CategoryID }}"
+        >{{ category.CategoryID }}</a
+      >
+    </td>
+    <td>{{ category.Name }}</td>
+    <td>{{ category.FullName }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

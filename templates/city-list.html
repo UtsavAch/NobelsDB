@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Citry Table</h3>
+<table>
+  <tr>
+    <th>
+      <b>CityID</b>
+    </th>
+    <th>
+      <b>CityName</b>
+    </th>
+    <th>
+      <b>CountryID</b>
+    </th>
+  </tr>
+
+  {% for city in cities %}
+  <tr>
+    <td>
+      <a href="/cities/{{ city.CityID }}">{{city.CityID}}</a>
+    </td>
+    <td>{{city.Name }}</td>
+    <td>
+      <a href="/countries/{{city.CountryID}}">{{city.CountryID}}</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

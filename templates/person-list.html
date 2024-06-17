@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Persons</h1>
+<table>
+  <tr>
+    <th>
+      <b>LaurateID</b>
+    </th>
+    <th>
+      <b>Name</b>
+    </th>
+    <th>
+      <b>BirthDate</b>
+    </th>
+    <th>
+      <b>Gender</b>
+    </th>
+    <th>
+      <b>Affiliation</b>
+    </th>
+    <th>
+      <b>DeathDate</b>
+    </th>
+  </tr>
+
+  {% for person in persons %}
+  <tr>
+    <td>
+      <a href="/laureates/{{ person.LaureateID }}">{{ person.LaureateID }}</a>
+    </td>
+    <td>{{ person.Name }}</td>
+    <td>{{ person.BirthDate }}</td>
+    <td>{{ person.Gender }}</td>
+    <td>{{ person.Affiliation }}</td>
+    <td>{{ person.DeathDate }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

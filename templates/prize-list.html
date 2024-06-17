@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Prizes</h1>
+<table>
+  <tr>
+    <th>
+      <b>NobelID</b>
+    </th>
+    <th>
+      <b>LaureateID</b>
+    </th>
+    <th>
+      <b>Portion</b>
+    </th>
+  </tr>
+
+  {% for prize in prizes %}
+  <tr>
+    <td>
+      <a href="/nobels/{{ prize.NobelID }}">{{ prize.NobelID }}</a>
+    </td>
+    <td>
+      <a href="/laureates/{{ prize.LaureateID }}">{{ prize.LaureateID }}</a>
+    </td>
+    <td>{{prize.Portion}}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

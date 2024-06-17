@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Laureate</h1>
+<p><b>Name: </b>{{ laureate.Name }}</p>
+<p><b>LaureateID: </b>{{ laureate.LaureateID }}</p>
+<p>
+  <b>Address: </b>{{ address.City }}, {{address.Country}}, {{address.Continent}}
+</p>
+<div>
+  <p><b style="font-size: 25px">Prizes</b></p>
+  {% for prize in prizes %}
+  <div>
+    <hr style="border: 0.5px solid black" />
+    <p><b>Category: </b>{{ prize.PrizeName }}</p>
+    <p><b>Portion: </b>{{ prize.Portion }}</p>
+    <p><b>Year: </b>{{ prize.Year }}</p>
+    <p><b>Motivation: </b>{{ prize.Motivation }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

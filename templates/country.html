@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Country Info</h1>
+<p><b>CountryID: </b>{{ country.CountryID }}</p>
+<p><b>CountryName: </b>{{ country.Name }}</p>
+<p>
+  <b>ContinentID: </b
+  ><a href="/continents/{{country.ContinentID}}">{{country.ContinentID}}</a>
+</p>
+{% endblock %}

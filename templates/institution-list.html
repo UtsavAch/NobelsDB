@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Institutions</h1>
+<table>
+  <tr>
+    <th>
+      <b>LaureateID</b>
+    </th>
+    <th>
+      <b>NativeName</b>
+    </th>
+    <th>
+      <b>Acronym</b>
+    </th>
+    <th>
+      <b>FoundationDate</b>
+    </th>
+  </tr>
+
+  {% for institution in institutions %}
+  <tr>
+    <td>
+      <a href="/laureates/{{ institution.LaureateID }}"
+        >{{ institution.LaureateID }}</a
+      >
+    </td>
+    <td>{{ institution.NativeName }}</td>
+    <td>{{ institution.Acronym }}</td>
+    <td>{{ institution.FoundationDate }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

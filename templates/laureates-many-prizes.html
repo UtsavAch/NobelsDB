@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Laureates Table</h1>
+<table>
+  <tr>
+    <th>
+      <b>LaureateID</b>
+    </th>
+    <th>
+      <b>LaureateName</b>
+    </th>
+    <th>
+      <b> NumOfPrizes</b>
+    </th>
+  </tr>
+
+  {% for laureate in laureates %}
+  <tr>
+    <td>
+      <a href="/laureates/{{laureate.LaureateID}}">{{ laureate.LaureateID }}</a>
+    </td>
+    <td>{{ laureate.Name }}</td>
+    <td>{{ laureate.NumofPrizes }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
